@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@ocean/core should not throw an error when correct packages are passed 1`] = `"Cannot find the package \\"@ocean/nextjs-adapter\\" or the package doesn't export the \\"Adapter\\" class"`;
+
+exports[`@ocean/core should throw an error for adapter not found 1`] = `"Cannot find the package \\"fake-package\\" or the package doesn't export the \\"Adapter\\" class"`;
+
+exports[`@ocean/core should throw an error for empty configuration 1`] = `"Adapter or Provider are missing"`;
+
+exports[`@ocean/core should throw an error for missing configuration 1`] = `"Cannot destructure property \`adapter\` of 'undefined' or 'null'."`;
+
+exports[`@ocean/core should throw an error for provider found 1`] = `"Cannot find the package \\"@ocean/nextjs-adapter\\" or the package doesn't export the \\"Adapter\\" class"`;

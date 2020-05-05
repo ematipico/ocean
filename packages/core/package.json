@@ -1,0 +1,29 @@
+{
+  "name": "@ocean/core",
+  "version": "0.0.0",
+  "description": "The core engine of ocean",
+  "author": "Emanuele Stoppa <my.burning@gmail.com>",
+  "homepage": "https://github.com/ematipico/ocean#readme",
+  "license": "MIT",
+  "main": "lib/core.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ematipico/ocean.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/ematipico/ocean/issues"
+  }
+}

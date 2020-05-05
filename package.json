@@ -1,0 +1,35 @@
+{
+  "name": "ocean",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ematipico/ocean.git",
+  "author": "Emanuele Stoppa <my.burning@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "jest packages/",
+    "test:watch": "jest packages/ --watch",
+    "build": "tsc --build"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.51",
+    "@types/jest": "25.2.1",
+    "@types/node": "13.13.4",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "chalk": "^4.0.0",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-plugin-node": "11.0.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "execa": "^4.0.0",
+    "jest": "25.5.4",
+    "lerna": "^3.20.2",
+    "prettier": "2.0.5",
+    "ts-jest": "25.4.0",
+    "typescript": "3.8.3"
+  },
+  "workspaces": [
+    "./packages/*"
+  ]
+}
