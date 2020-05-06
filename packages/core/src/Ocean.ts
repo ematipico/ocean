@@ -1,6 +1,7 @@
-import {MissingOceanConfiguration} from "./errors/MissingOceanConfiguration";
-import {Adapter} from "./Adapter";
-import {createNewAdapter} from "./factory";
+import { MissingOceanConfiguration } from './errors/MissingOceanConfiguration';
+import { Adapter } from './Adapter';
+import { createNewAdapter, createNewProvider } from './factory';
+import { Provider } from './Provider';
 
 export enum AdapterEnum {
 	NuxtJS = '@ocean/nuxt-adapter',
@@ -15,9 +16,13 @@ export interface OceanConfiguration {
 	provider: ProviderEnum;
 }
 
-export class Ocean<AdapterInterface extends Adapter = Adapter> {
+export interface OceanOptions {
+	frameworkDirectory: string;
+}
+
+export class Ocean<AdapterInterface extends Adapter = Adapter, ProviderInterface extends Provider = Provider> {
 	adapter: AdapterInterface;
-	provider: ProviderEnum;
+	provider: ProviderInterface;
 
 	constructor({ adapter, provider }: OceanConfiguration) {
 		if (!adapter || !provider) {
@@ -25,10 +30,14 @@ export class Ocean<AdapterInterface extends Adapter = Adapter> {
 		}
 
 		this.adapter = createNewAdapter<AdapterInterface>(adapter);
-		this.provider = provider;
+		this.provider = createNewProvider<ProviderInterface>(provider);
 	}
 
-	async run() {
+	async asyncRun(): Promise<void> {
+		this.adapter.loadConfiguration();
+		const mappings = await this.adapter.asyncGenerateMappings();
+		this.provider.setMappings(mappings);
+		await this.provider.asyncRun();
 		await Promise.resolve();
 	}
 }

@@ -1,17 +1,17 @@
 {
-  "name": "@ocean/nextjs-adapter",
+  "name": "@ocean/utils",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "emanuele <my.burning@gmail.com>",
   "homepage": "https://github.com/ematipico/ocean#readme",
   "license": "MIT",
-  "main": "lib/nextjs-adapter.js",
+  "main": "lib/utils.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
   "files": [
-    "lib/*"
+    "lib"
   ],
   "publishConfig": {
     "registry": "https://registry.yarnpkg.com"
@@ -25,14 +25,5 @@
   },
   "bugs": {
     "url": "https://github.com/ematipico/ocean/issues"
-  },
-  "peerDependencies": {
-    "@ocean/core": "0.0.0",
-    "next": ">=9.0.0"
-  },
-  "devDependencies": {
-    "@ocean/core": "0.0.0",
-    "@ocean/utils": "0.0.0",
-    "next": "^9.3.6"
   }
 }

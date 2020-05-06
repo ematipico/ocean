@@ -1,0 +1,7 @@
+{
+  "main": "index.js",
+  "dependencies": {
+    "@middy/core": "^1.0.0",
+    "@ematipico/middy-request-response": "^1.0.1"
+  }
+}
